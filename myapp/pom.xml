@@ -50,15 +50,7 @@ under the License.
     <!-- Jakarta EE API -->
     <jakartaee-api.version>9.0.0</jakartaee-api.version>
 
-    <!-- Arquillian BOM -->
-    <arquillian-bom.version>1.7.0.Alpha9</arquillian-bom.version>
-    <junit-jupiter.version>5.7.1</junit-jupiter.version>
-
-    <!-- Glassfish server -->
-    <glassfish.version>6.0.0</glassfish.version>
-    <arquillian-glassfish6.version>1.0.0.Alpha1</arquillian-glassfish6.version>
-    <jersey.version>3.0.1</jersey.version>
-
+   
     <!-- by default skip tests -->
     <skipTests>true</skipTests>
   </properties>
@@ -69,22 +61,9 @@ under the License.
         <groupId>jakarta.platform</groupId>
         <artifactId>jakarta.jakartaee-api</artifactId>
         <version>${jakartaee-api.version}</version>
-        <scope>provided</scope>
       </dependency>
-      <dependency>
-        <groupId>org.jboss.arquillian</groupId>
-        <artifactId>arquillian-bom</artifactId>
-        <version>${arquillian-bom.version}</version>
-        <scope>import</scope>
-        <type>pom</type>
-      </dependency>
-      <dependency>
-        <groupId>org.junit</groupId>
-        <artifactId>junit-bom</artifactId>
-        <version>${junit-jupiter.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
+   
+   
     </dependencies>
   </dependencyManagement>
 
@@ -93,23 +72,7 @@ under the License.
       <groupId>jakarta.platform</groupId>
       <artifactId>jakarta.jakartaee-api</artifactId>
     </dependency>
-    <dependency>
-      <groupId>org.jboss.arquillian.junit5</groupId>
-      <artifactId>arquillian-junit5-container</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <!-- see: https://github.com/arquillian/arquillian-core/issues/248 -->
-    <!-- and https://github.com/arquillian/arquillian-core/pull/246/files -->
-    <dependency>
-      <groupId>org.jboss.arquillian.protocol</groupId>
-      <artifactId>arquillian-protocol-servlet-jakarta</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter</artifactId>
-      <scope>test</scope>
-    </dependency>
+   
   </dependencies>
 
   <build>
@@ -137,71 +100,6 @@ under the License.
     </plugins>
   </build>
   <profiles>
-    <profile>
-      <id>glassfish</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.codehaus.cargo</groupId>
-            <artifactId>cargo-maven3-plugin</artifactId>
-            <configuration>
-              <container>
-                <containerId>glassfish6x</containerId>
-                <artifactInstaller>
-                  <groupId>org.glassfish.main.distributions</groupId>
-                  <artifactId>glassfish</artifactId>
-                  <version>${glassfish.version}</version>
-                </artifactInstaller>
-              </container>
-              <configuration>
-                <!-- the configuration used to deploy -->
-                <home>${project.build.directory}/glassfish6x-home</home>
-                <properties>
-                  <cargo.remote.password></cargo.remote.password>
-                </properties>
-              </configuration>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-
-      <dependencies>
-        <!-- Jersey -->
-        <dependency>
-          <groupId>org.glassfish.jersey.media</groupId>
-          <artifactId>jersey-media-sse</artifactId>
-          <version>${jersey.version}</version>
-          <scope>test</scope>
-        </dependency>
-        <dependency>
-          <groupId>org.glassfish.jersey.media</groupId>
-          <artifactId>jersey-media-json-binding</artifactId>
-          <version>${jersey.version}</version>
-          <scope>test</scope>
-        </dependency>
-        <dependency>
-          <groupId>org.glassfish.jersey.inject</groupId>
-          <artifactId>jersey-hk2</artifactId>
-          <version>${jersey.version}</version>
-          <scope>test</scope>
-        </dependency>
-        <dependency>
-          <groupId>org.glassfish.jersey.core</groupId>
-          <artifactId>jersey-client</artifactId>
-          <version>${jersey.version}</version>
-          <scope>test</scope>
-        </dependency>
-        <dependency>
-          <groupId>org.jboss.arquillian.container</groupId>
-          <artifactId>arquillian-glassfish-remote-6</artifactId>
-          <version>${arquillian-glassfish6.version}</version>
-          <scope>test</scope>
-        </dependency>
-      </dependencies>
-
-    </profile>
+   
   </profiles>
 </project>
