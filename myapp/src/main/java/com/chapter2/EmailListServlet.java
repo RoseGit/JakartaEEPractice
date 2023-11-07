@@ -23,6 +23,7 @@ import java.util.List;
 public class EmailListServlet extends HttpServlet {
 
     public static List<User> listUsers = new ArrayList<>();
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -34,27 +35,27 @@ public class EmailListServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String url = "joinemail.html";
-        
+
         //get action
         String action = request.getParameter("action");
-        if(action == null){
+        if (action == null) {
             action = "join";
         }
-        
-        if(action.equals("join")){
+
+        if (action.equals("join")) {
             url = "/joinemail.html";
-        }else if(action.equals("add")){
+        } else if (action.equals("add")) {
             //get parameters
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
             String email = request.getParameter("email");
             User user = new User(firstName, lastName, email);
             listUsers.add(user);
-            
+
             request.setAttribute("user", user);
             url = "/thanks.jsp";
         }
-        
+
         //Re dirigimos a la url especificada, el request tiene el objeto User cuando se guarda por tanto se puede utilizar en el thanks.jsp 
         getServletContext().getRequestDispatcher(url).forward(request, response);
     }

@@ -4,11 +4,13 @@
  */
 package com.chapter2.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Rose
  */
-public class User {
+public class User implements Serializable{
     
     private String firstName;
     private String lastName;
@@ -42,7 +44,5 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-    
-    
+    }    
 }
