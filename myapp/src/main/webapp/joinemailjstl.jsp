@@ -13,7 +13,7 @@
     <p><i>${message}</i></p>
 </c:if>
     
-<form action="emailListjsp" method="post">
+<form action="emailListjstl" method="post">
     <input type="hidden" name = "action" value="add">
     <label>Email:</label>
     <input type="email" name="email" value="${user.email}"><br>

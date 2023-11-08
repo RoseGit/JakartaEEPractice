@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.chapter5;
+package com.chapter6;
 
 import com.chapter2.model.User;
 import jakarta.servlet.ServletException;
@@ -18,9 +18,8 @@ import java.util.List;
  *
  * @author Rose
  */
-@WebServlet(name = "EmailListJSP", urlPatterns = {"/emailListjsp"})
-public class EmailListJSP extends HttpServlet{
-    
+@WebServlet(name = "EmailListJSTL", urlPatterns = {"/emailListjstl"})
+public class EmailListJSTL extends HttpServlet{
     public static List<User> listUsers = new ArrayList<>();
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,7 +31,7 @@ public class EmailListJSP extends HttpServlet{
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String url = "/joinemail.jsp";
+        String url = "/joinemailjstl.jsp";
         
         //get action
         String action = request.getParameter("action");
@@ -40,9 +39,8 @@ public class EmailListJSP extends HttpServlet{
             action = "join";
         }
         
-        
         if(action.equals("join")){
-            url = "/joinemail.jsp";
+            url = "/joinemailjstl.jsp";
         }else if(action.equals("add")){
             //get parameters
             String firstName = request.getParameter("firstName");
@@ -56,7 +54,7 @@ public class EmailListJSP extends HttpServlet{
                lastName == null || lastName.isEmpty() ||
                     email == null || email.isEmpty()){
                 message = "Please fill oput all three text boxes";
-                url = "/joinemail.jsp";
+                url = "/joinemailjstl.jsp";
             }else{
                 message = "";
                 url = "/thanks.jsp";
