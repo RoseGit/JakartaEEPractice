@@ -7,6 +7,7 @@ package com.chapter7;
 import com.chapter2.model.User;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -19,7 +20,7 @@ import java.io.IOException;
  * @author Rose
  */
 
-//FIXME: configurar el acceso al servlet 
+@WebServlet(name = "download", urlPatterns = {"/download"})
 public class DownloadServlet extends HttpServlet {
 
     @Override
@@ -73,7 +74,7 @@ public class DownloadServlet extends HttpServlet {
 
             //If cookie does not exist, go to registration page 
             if (emailAddress == null || emailAddress.equals("")) {
-                url = "register.jsp";
+                url = "/register.jsp";
             } else {
                 //If cookie exist, create user object and go to Downloads page
                 ServletContext servletContext = getServletContext();

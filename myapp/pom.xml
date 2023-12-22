@@ -27,7 +27,7 @@ under the License.
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>com.rose</name>
+    <name>Jakarta EE</name>
     <description>A Jakarta EE starter boilerplate for Jakarta EE 9</description>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

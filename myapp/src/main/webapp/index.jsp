@@ -15,19 +15,19 @@
     <body>
         <h1>List of albums!</h1>
         <p>
-            <a href="download?action=checkOuser&amp;productCode=8601">
+            <a href="download?action=checkUser&amp;productCode=8601">
                 86 (The band)- True Life Songs and Pictures
             </a><br>
             
-            <a href="download?action=checkOuser&amp;productCode=pf01">
+            <a href="download?action=checkUser&amp;productCode=pf01">
                 Paddlefoot - The First CD
             </a><br>
             
-            <a href="download?action=checkOuser&amp;productCode=pf02">
+            <a href="download?action=checkUser&amp;productCode=pf02">
                 Paddlefoot - The Second CD
             </a><br>
             
-            <a href="download?action=checkOuser&amp;productCode=jr01">
+            <a href="download?action=checkUser&amp;productCode=jr01">
                 Joe Rut & Genuine Wood Grained Finish
             </a><br>
         </p>
