@@ -22,13 +22,13 @@
             <tr>
                 <td>You are a star</td>    
                 <td>
-                    <a href="/musicStore/sound/${productCode}/start.mp3">MP3</a>
+                    <a href="/musicStore/sound/${productCode}/Temblando.mp3">MP3</a>
                 </td>
             </tr>
             <tr>
                 <td>Don't Make No Difference</td>    
                 <td>
-                    <a href="/musicStore/sound/${productCode}/no_difference.mp3">MP3</a>
+                    <a href="/musicStore/sound/${productCode}/Te_quiero.mp3">MP3</a>
                 </td>
             </tr>
         </table>

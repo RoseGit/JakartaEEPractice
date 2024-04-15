@@ -16,19 +16,19 @@
         <h1>List of albums!</h1>
         <p>
             <a href="download?action=checkUser&amp;productCode=8601">
-                86 (The band)- True Life Songs and Pictures
+                Hombres G- Lo mejor de hombres G
             </a><br>
             
             <a href="download?action=checkUser&amp;productCode=pf01">
-                Paddlefoot - The First CD
+                Lindsay Stirling - Mix
             </a><br>
             
             <a href="download?action=checkUser&amp;productCode=pf02">
-                Paddlefoot - The Second CD
+                RedBone - Vol. 1.
             </a><br>
             
             <a href="download?action=checkUser&amp;productCode=jr01">
-                Joe Rut & Genuine Wood Grained Finish
+                David Garret - Rock Symphonnies 
             </a><br>
         </p>
     </body>
