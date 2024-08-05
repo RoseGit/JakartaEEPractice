@@ -9,11 +9,19 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- *
+ * Shows the main page or the information that the user captured from the main page.
  * @author rose
  */
 public class EmailListServlet extends HttpServlet {
 
+    /**
+     * Redirects to another web page depending on the action specified.
+     *
+     * @param request @see {@link HttpServletRequest}
+     * @param response @see {@link HttpServletResponse}
+     * @throws ServletException @see {@link ServletException}
+     * @throws IOException @see {@link IOException}
+     */
     @Override
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response)
@@ -51,8 +59,17 @@ public class EmailListServlet extends HttpServlet {
                 .forward(request, response);
     }
 
-    @Override
-    protected void doGet(HttpServletRequest request,
+/**
+ * Redirects to another web page depending on the action specified, using
+ * {@link #doPost(HttpServletRequest, HttpServletResponse)} method.
+ *
+ * @param request @see {@link HttpServletRequest}
+ * @param response @see {@link HttpServletResponse}
+ * @throws ServletException @see {@link ServletException}
+ * @throws IOException @see {@link IOException}
+ */
+@Override
+protected void doGet(HttpServletRequest request,
             HttpServletResponse response)
             throws ServletException, IOException {
         doPost(request, response);
