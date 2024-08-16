@@ -3,7 +3,7 @@ package com.rose.ch05email.business;
 import java.io.Serializable;
 
 /**
- *
+ *User´s model.
  * @author rose
  */
 public class User implements Serializable {
@@ -12,6 +12,9 @@ public class User implements Serializable {
     private String lastName;
     private String email;
 
+    /**
+     * Default constructor
+     */
     public User() {
         firstName = "";
         lastName = "";

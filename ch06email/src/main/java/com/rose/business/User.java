@@ -3,25 +3,28 @@ package com.rose.business;
 import java.io.Serializable;
 
 /**
- *
+ *User´s model.
  * @author Rose
  */
 public class User implements Serializable {
 
     private String firstName;
     private String lastName;
-    private String email;
+    private String Address;
 
+    /**
+     * Default constructor
+     */
     public User() {
         firstName = "";
         lastName = "";
-        email = "";
+        Address = "";
     }
 
     public User(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.email = email;
+        this.Address = email;
     }
 
     public String getFirstName() {
@@ -40,11 +43,11 @@ public class User implements Serializable {
         this.lastName = lastName;
     }
 
-    public String getEmail() {
-        return email;
+    public String getEmailAddress() {
+        return Address;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmailAddress(String email) {
+        this.Address = email;
     }
 }
