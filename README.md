@@ -49,4 +49,15 @@ ch05email
         We can use the web.xml file or @WebServlet annotation to provide initialization parameters that apply  to the entire application or to specific servlets
 
         Since instance variables in a servlet are not thread-safe and can result in serious problems, we should never use instance variables un a servlet.
-        
+
+ch05email 
+        Http os a stateless protocol, web applications must provide for session tracking. 
+        That way, an application is able to relate each request to a specific browser and to the data for that session.
+
+        To provide for session tracking, Java creates one session object for each browser.
+        Then you can add attributes like variables and objects to this session object, and you can 
+        retrieve the values of these attributes.
+
+        In general it's considered a best practice to implement session tracking by using cookies.
+
+        Persistent cookies are stored on the user's PC while per-session cookies are deleted when the session ends.

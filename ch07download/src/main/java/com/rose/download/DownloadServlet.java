@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.rose.download;
 
 import com.rose.business.User;
@@ -17,11 +13,20 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
+ * Responsible for downloading mp3 music.
  *
  * @author Rose
  */
 public class DownloadServlet extends HttpServlet {
 
+    /**
+     * re directed to the indicated page according to the desired action
+     *
+     * @param request @see {@link HttpServletRequest}
+     * @param response @see {@link HttpServletResponse}
+     * @throws IOException
+     * @throws ServletException
+     */
     @Override
     public void doGet(HttpServletRequest request,
             HttpServletResponse response)
@@ -51,6 +56,14 @@ public class DownloadServlet extends HttpServlet {
                 .forward(request, response);
     }
 
+    /**
+     * processes the download or registration request
+     *
+     * @param request @see {@link HttpServletRequest}
+     * @param response @see {@link HttpServletResponse}
+     * @throws IOException
+     * @throws ServletException
+     */
     @Override
     public void doPost(HttpServletRequest request,
             HttpServletResponse response)
@@ -70,6 +83,13 @@ public class DownloadServlet extends HttpServlet {
                 .forward(request, response);
     }
 
+    /**
+     * validates if a user cookie exists
+     *
+     * @param request @see {@link HttpServletRequest}
+     * @param response @see {@link HttpServletResponse}
+     * @return The registration or download url.
+     */
     private String checkUser(HttpServletRequest request,
             HttpServletResponse response) {
 
@@ -103,6 +123,13 @@ public class DownloadServlet extends HttpServlet {
         return url;
     }
 
+    /**
+     * Stores user information in data file and generates cookie.
+     *
+     * @param request @see {@link HttpServletRequest}
+     * @param response @see {@link HttpServletResponse}
+     * @return
+     */
     private String registerUser(HttpServletRequest request,
             HttpServletResponse response) {
 
@@ -138,6 +165,13 @@ public class DownloadServlet extends HttpServlet {
         return url;
     }
 
+    /**
+     * Allows you to delete the user's stored cookies
+     *
+     * @param request @see {@link HttpServletRequest}
+     * @param response @see {@link HttpServletResponse}
+     * @return the deleted cookies page.
+     */
     private String deleteCookies(HttpServletRequest request,
             HttpServletResponse response) {
 

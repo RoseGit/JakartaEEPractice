@@ -1,16 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.rose.util;
 
 import jakarta.servlet.http.Cookie;
+
 /**
+ * Class that allows us to manage cookie information.
  *
  * @author Rose
  */
 public class CookieUtil {
 
+    /**
+     * Gets a specific value from an existing cookie
+     *
+     * @param cookies List of cookies
+     * @param cookieName cookie name to get its value.
+     * @return The cookie value
+     */
     public static String getCookieValue(
             Cookie[] cookies, String cookieName) {
 

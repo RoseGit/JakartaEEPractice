@@ -10,11 +10,17 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 /**
- *
+ * Allows it to act as a data store
  * @author Rose
  */
 public class UserIO {
 
+    /**
+     * Allows saving user information
+     * @param user @see {@link User}
+     * @param filepath the path of the file where the information will be saved.
+     * @return true if you were able to log to the file, false otherwise.
+     */
     public static boolean add(User user, String filepath) {
         try {
             File file = new File(filepath);
@@ -32,6 +38,12 @@ public class UserIO {
         }
     }
 
+    /**
+     * Get user information from the data warehouse file.
+     * @param email The email from which you want to recover the information.
+     * @param filepath the path of the file where the information is saved.
+     * @return @see {@link User}
+     */
     public static User getUser(String email, String filepath) {
         try {
             File file = new File(filepath);
@@ -62,6 +74,11 @@ public class UserIO {
         }
     }
 
+    /**
+     * Gets the entire list of registered users
+     * @param filepath the path of the file where the information is saved.
+     * @return List of @see {@link User}
+     */
     public static ArrayList<User> getUsers(String filepath) {
         try {
             ArrayList<User> users = new ArrayList<User>();
