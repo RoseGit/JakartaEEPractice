@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.rose.data;
 
 import com.rose.business.Product;
@@ -12,11 +8,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 /**
- *
+ *Store product information in a file
  * @author Rose
  */
 public class ProductIO {
 
+    /**
+     * Get product information
+     * @param code The product identifier
+     * @param filepath The path of the file where you will search for the information
+     * @return @see {@link Product}
+     */
     public static Product getProduct(String code, String filepath) {
         try {
             File file = new File(filepath);
@@ -47,6 +49,11 @@ public class ProductIO {
         }
     }
 
+    /**
+     * Gets all the products that are in the data file
+     * @param filepath The path of the file where you will search for the information
+     * @return @see {@link Product}
+     */
     public static ArrayList<Product> getProducts(String filepath) {
         ArrayList<Product> products = new ArrayList<Product>();
         File file = new File(filepath);

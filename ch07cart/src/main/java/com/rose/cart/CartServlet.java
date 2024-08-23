@@ -15,12 +15,22 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import com.rose.data.ProductIO;
+
 /**
+ * Manage cart operations
  *
  * @author Rose
  */
 public class CartServlet extends HttpServlet {
 
+    /**
+     * Execute the actions indicated in relation to the shopping cart.
+     *
+     * @param request @see {@link HttpServletRequest}
+     * @param response @see {@link HttpServletResponse}
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response)
