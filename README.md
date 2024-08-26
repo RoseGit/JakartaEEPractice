@@ -50,7 +50,7 @@ ch05email
 
         Since instance variables in a servlet are not thread-safe and can result in serious problems, we should never use instance variables un a servlet.
 
-ch05email 
+ch07email 
         Http os a stateless protocol, web applications must provide for session tracking. 
         That way, an application is able to relate each request to a specific browser and to the data for that session.
 
@@ -61,3 +61,13 @@ ch05email
         In general it's considered a best practice to implement session tracking by using cookies.
 
         Persistent cookies are stored on the user's PC while per-session cookies are deleted when the session ends.
+
+ ch08email 
+        The JSP Expression Lenguage(EL) provides a compact syntax that lets you get dataa from JavaBeans, maps, arrays and list
+        that have been stored as an attribute of a web application
+
+        A JavaBean us a special type of object that provides a standar way to access its properties
+
+        You can use other EL operators to perform calculations and make comparison.
+        
+        If necessary, you can disable EL or scrpting for one or mor pages in a web application.
