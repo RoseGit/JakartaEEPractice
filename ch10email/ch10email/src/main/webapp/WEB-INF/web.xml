@@ -1,0 +1,24 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+    <servlet>
+        <servlet-name>EmailListServlet</servlet-name>
+        <servlet-class>com.rose.email.EmailListServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EmailListServlet</servlet-name>
+        <url-pattern>/emailList</url-pattern>
+    </servlet-mapping>
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+    
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
