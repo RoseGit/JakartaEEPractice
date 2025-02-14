@@ -12,7 +12,12 @@ import jakarta.servlet.http.HttpServletResponse;
 
 public class EmailListServlet extends HttpServlet {
 
-    @Override
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response)
             throws ServletException, IOException {
