@@ -7,7 +7,7 @@
 </head>
 <body>
     
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="jakarta.tags.core" prefix="c"%>
 <c:if test="${sqlStatement == null}">
     <c:set var="sqlStatement" value="select * from User" />
 </c:if>
