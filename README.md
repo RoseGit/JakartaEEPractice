@@ -1,4 +1,10 @@
 # JakartaEEPractice
+Based on this book 
+![image](https://github.com/user-attachments/assets/716c671a-aa3e-4787-aabc-03b4cbb5c55f)
+
+please visit the Web Site https://www.murach.com/
+
+
 WEB-INF usually, this folder contains the web.xml file
         It is used to configure servlets and other components that the application has. 
         This directory is not accessible directly from the web. 
@@ -84,3 +90,12 @@ Chapter 09
         You can use the if tag to code the equivalent of a Java if statement
 
         You can use the choose tag to code the equivalent of a Java if/else statement
+
+Chapter 10
+        To create a custom tag that can be used in a JSP, you must create an XML file called the Tag Library Description (TLD). This TLD defines the tag library that contains the custom tags for an application
+
+        To implement a custom tag that's defined in the TLD, you code a tag class which can also be referred to as a tag handler class. This is a class that implements the Tag interface, usually by extending the TagSupport class
+
+        As you code the tag classes, you can use the methods and fields of the TagSupport, PageContext, bodyTagSupport and Bodycontent classes of the JAVA EE API
+
+
