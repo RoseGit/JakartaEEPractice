@@ -6,7 +6,7 @@ WEB-INF usually, this folder contains the web.xml file
 META-INF Contains the context.xml file 
          This file can be used to configure the application context.
 
-ch02email: 
+Chapter 02: 
         A quick look at Servlets
          It shows in a general way how a JSP works. It also takes a look at the MVC pattern where business objects are defined as a model and data objects are generally persisted as a database using generally DAO's.
 
@@ -18,7 +18,7 @@ ch02email:
 
         A JSP page consists of using special Java tags and allows the use of tags called Expression Languages ​​that are embedded within the HTML code.
 
-ch04email
+Chapter 04
         A quick look at html and css emphasizing that html should be used for content and structure and css to format the page
 
         To add an external style sheet to a web page, a link must be indicated in the head section of the html document indicating where the style sheet is located.
@@ -30,7 +30,7 @@ ch04email
         An HTML Form contains one or more controls such as text boxes, check boxes, radio buttons, combo boxes, etc. 
         Within the form it must contain a submit button that calls a jsp or servlet when the user clicks, if necessary there can be more forms
 
-ch05email 
+Chapter 05
         The use of servlets is shown in a more in-depth way
         A servlet is a Java class that extends the HttpServlet class and runs within a servlet container such as Tomcat
 
@@ -50,7 +50,7 @@ ch05email
 
         Since instance variables in a servlet are not thread-safe and can result in serious problems, we should never use instance variables un a servlet.
 
-ch07email 
+Chapter 07
         Http os a stateless protocol, web applications must provide for session tracking. 
         That way, an application is able to relate each request to a specific browser and to the data for that session.
 
@@ -62,7 +62,7 @@ ch07email
 
         Persistent cookies are stored on the user's PC while per-session cookies are deleted when the session ends.
 
- ch08email 
+ Chapter 08 
         The JSP Expression Lenguage(EL) provides a compact syntax that lets you get dataa from JavaBeans, maps, arrays and list
         that have been stored as an attribute of a web application
 
@@ -71,3 +71,16 @@ ch07email
         You can use other EL operators to perform calculations and make comparison.
         
         If necessary, you can disable EL or scrpting for one or mor pages in a web application.
+
+Chapter 09 
+        The JSP Standar Tag Library (JSTL) provides tags for common task that need to be performed in JSPs.
+
+        Before you can use JSTL tags, you must make the jstl-impl.jar and jstl-api.jar files available to the application.
+
+        Before you can use the JSTL tags in a JSP, you must code a taglib directive for the library that you want to use.
+
+        You can use the forTokens tag to loop throught items in a delimited string 
+
+        You can use the if tag to code the equivalent of a Java if statement
+
+        You can use the choose tag to code the equivalent of a Java if/else statement
